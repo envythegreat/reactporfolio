@@ -12,11 +12,18 @@ function Header () {
 			})
 		}
 	}
-
 	
+	const linkAction = () => {
+		const navMenu = document.getElementById('nav-menu');
+		navMenu.classList.remove('show');
+	}
+
+
 
 	useEffect(() => {
 		showMenu('nav-toggle', 'nav-menu');
+		const navLinks = document.querySelectorAll('.nav__link');
+		navLinks.forEach(n => n.addEventListener('click', linkAction));
 	})
 	
 
