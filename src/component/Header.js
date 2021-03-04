@@ -18,28 +18,28 @@ function Header () {
 		navMenu.classList.remove('show');
 	}
 
-	function scrollActive(){
-		const scrollY = window.pageYOffset
+	// function scrollActive(){
+	// 	const scrollY = window.pageYOffset
 
-		sections.forEach(current =>{
-			const sectionHeight = current.offsetHeight
-			const sectionTop = current.offsetTop - 50;
-			sectionId = current.getAttribute('id')
+	// 	sections.forEach(current =>{
+	// 		const sectionHeight = current.offsetHeight
+	// 		const sectionTop = current.offsetTop - 50;
+	// 		sectionId = current.getAttribute('id')
 
-			if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-				document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
-			}else{
-				document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
-			}
-		})
-	}
+	// 		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+	// 			document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
+	// 		}else{
+	// 			document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
+	// 		}
+	// 	})
+	// }
 
 
 	useEffect(() => {
 		showMenu('nav-toggle', 'nav-menu');
 		const navLinks = document.querySelectorAll('.nav__link');
-		const sections = document.querySelectorAll('section[id]');
-		window.addEventListener('scroll', scrollActive);
+		// const sections = document.querySelectorAll('section[id]');
+		// window.addEventListener('scroll', scrollActive);
 		navLinks.forEach(n => n.addEventListener('click', linkAction));
 	})
 	
