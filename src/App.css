@@ -12,6 +12,14 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 15px #fff;
+    }
+    to {
+      text-shadow: 0 2 10px #fff, 0 2 15px #fff, 0 2 20px #3bba9c;
+    }
+  }
 
 .App-header {
   background-color: #282c34;
@@ -47,8 +55,8 @@
 
 /*===== Colores =====*/
 :root{
-    --first-color: #5361FF;
-    --white-color: #FAFAFF;
+    --first-color: #111111;
+    --white-color: #3bba9c;
     --dark-color: #2A3B47;
     --text-color: #697477;
 }
@@ -56,14 +64,14 @@
 /*===== Fuente y tipografia =====*/
 :root{
     --body-font: 'Montserrat', sans-serif;
-    --big-font-size: 6.25rem;
+    --big-font-size: 2.5rem;
     --h2-font-size: 1.25rem;
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
 }
 @media screen and (min-width: 768px){
     :root{
-        --big-font-size: 10.5rem;
+        --big-font-size: 3.5rem;
         --h2-font-size: 2rem;
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
@@ -190,10 +198,13 @@ img{
 }
 .nav__logo{
     color: var(--white-color);
+    font-weight: bold;
+    font-size: 35px;
+    font-family: cursive;
 }
 .nav__toggle{
     color: var(--white-color);
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -227,7 +238,9 @@ img{
     align-self: flex-end;
     font-size: var(--big-font-size);
     color: var(--white-color);
-    line-height: .8;
+    line-height: 1;
+    text-align: center;
+
 }
 .home__title span{
     text-shadow: 0 20px 25px rgba(0,0,0,.5);
@@ -235,11 +248,13 @@ img{
 .home__scroll{
     align-self: flex-end;
     padding-bottom: var(--mb-4);
+    text-align: center;
 }
 .home__scroll-link{
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     color: var(--white-color);
+    animation: glow 2s ease infinite;
 }
 .home__img{
     position: absolute;
@@ -260,12 +275,13 @@ img{
     padding-top: 1rem;
     width: 120px;
     height: 120px;
-    background-color: var(--first-color);
+    background-color: transparent;
     border-radius: 50%;
     overflow: hidden;
 }
 .about__img img{
-    width: 100px;
+    /* width: 100%; */
+    background-size: cover;
 }
 .about__subtitle{
     font-size: var(--h2-font-size);
@@ -465,7 +481,7 @@ img{
         row-gap: 0;
     }
     .home__img{
-        width: 524px;
+        width: 400px;
         right: 10%;
     }
 
@@ -525,3 +541,4 @@ img{
         right: 24%;
     }
 }
+/* Animation*/
