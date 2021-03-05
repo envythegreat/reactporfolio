@@ -13,9 +13,11 @@ function About () {
           <h2 className="about__subtitle">Mohamed Habib Alouani</h2>
           <span className="about__profession">Full Stack Developer</span>
           <p className="about__text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Adipisci consectetur, architecto quas fugiat, iste inventore facere repellendus delectus id,
-            vitae blanditiis
+            I have a clear, logical mind with a practical approach to problem-solving and a drive to see things
+            through to completion. i always strive to achieve the highest standard possible at any given task in any
+            given situation. When it comes to making something with Javascript i'm creatively insane. I am
+            currently looking for an opportunity to use my technical skills in a challenging working environment and
+            become a valuable asset to the organization that I work for.
           </p>
           <div className="about__social">
             <a href="#1" className="about__social-icon"><box-icon name='linkedin-square' type='logo' ></box-icon></a>
