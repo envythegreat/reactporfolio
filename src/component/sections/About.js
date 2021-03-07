@@ -9,7 +9,7 @@ function About () {
         <div className="about__img">
           <img src={require('../../assets/madara.png').default} alt="" />
         </div>
-        <div>
+        <div className="textabout__area">
           <h2 className="about__subtitle">Mohamed Habib Alouani</h2>
           <span className="about__profession">Full Stack Developer</span>
           <p className="about__text">
