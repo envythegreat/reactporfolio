@@ -481,6 +481,7 @@ img{
 .education__content{
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
+    transition: 0.5s;
 }
 .education__year, .education__race {
     font-size: 1rem;
@@ -521,6 +522,39 @@ img{
     background-color: var(--white-color);
     transform: translate(5px, -4px);
 }
+/*BUTTONS*/
+.button__container{
+    text-align: center;
+    row-gap: 2rem;
+    margin-bottom: 2rem;
+}
+.button, .button__light{
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    margin: 0 5px;
+    transition: 0.5s ease-in-out;
+}
+.button {
+    background-color: var(--white-color);
+    color:snow;
+    border: 0px;
+    position: relative;
+}
+.button__light {
+    background-color: #fffafa;
+    color: var(--first-color);
+    border: 1px solid var(--first-color);
+    
+}
+/* .button:hover {
+    background-color: #2A3B47;
+}  
+  
+.button__light:hover {
+    color: #7e5757;
+} */
 /* ===== MEDIA QUERIES =====*/
 /* For small devices */
 @media screen and (max-width: 320px) {
