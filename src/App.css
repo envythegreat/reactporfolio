@@ -374,9 +374,9 @@ img{
 
 
 /* ===== PORTFOLIO =====*/
-.portfolio{
+/* .portfolio{
     background-color: var(--white-color);
-}
+} */
 .portfolio__container{
     justify-items: center;
     row-gap: 2rem;
