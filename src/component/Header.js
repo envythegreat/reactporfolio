@@ -1,8 +1,15 @@
 // import '../App.css'
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import 'boxicons';
+import Contact from './Contact';
+
+
 function Header () {
 	
+	const [show, setModal] = useState();
+  const showModal = () => setModal(true);
+	const hideModal = () => setModal(false);
+
 	const showMenu = (toogleID, navID) => {
 		const toggle = document.getElementById(toogleID);
 		const nav = document.getElementById(navID);
@@ -58,7 +65,7 @@ function Header () {
 						<li className="nav__item"><a className="nav__link" href="#About">About</a></li>
 						<li className="nav__item"><a className="nav__link" href="#Skills">Skills</a></li>
 						<li className="nav__item"><a className="nav__link" href="#Projects">Projects</a></li>
-						<li className="nav__item"><a className="nav__link contactd__button" href="#Contact">Contact us</a></li>
+						<li className="nav__item"><a className="nav__link contactd__button" href="#Contact" onClick={showModal} >Contact us</a></li>
 					</ul>
 				</div>
 
@@ -66,6 +73,9 @@ function Header () {
 					<box-icon color="white" name='menu'></box-icon>
 				</div>
 			</nav>
+			<Contact show={show} handleClose={hideModal} >
+				<p>sss</p>
+			</Contact>
 		</header>
   );
 }
