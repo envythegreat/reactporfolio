@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 
-const Contact = ({ handleClose, show, children }) => {
-  const showHideClassName = show ? "modal display-block" : "modal display-none";
+const Contact = ({show, children, hideModal }) => {
+  const [showClassName, SetShowClassName ] = useState(show ? "modal display-block" : "modal display-none")
+  const handleClose = () => {
+                              SetShowClassName("modal display-none")
+                              hideModal()
+                            }
 
   return (
-    <div className={showHideClassName}>
+    <div className={showClassName}>
       <section className="modal-main contact section" id="contact">
+        <button className="close__Button" onClick={handleClose}>X</button>
         <h2 className="section-title" >Get In Touch</h2>
 
         <div className="contact__container bd-grid" >

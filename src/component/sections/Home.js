@@ -1,5 +1,5 @@
 import React from 'react';
-import Waves from '../Waves'
+import {AnimatedWaves} from '../Waves'
 
 function Home () {
   return(
@@ -14,7 +14,7 @@ function Home () {
         
         {/* <img src={require('../../assets/sukuna.png').default} alt="ss" className="home__img" /> */}
       </div>
-      <Waves />
+      <AnimatedWaves />
     </section>
   );
 }

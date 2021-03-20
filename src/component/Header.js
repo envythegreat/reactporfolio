@@ -8,8 +8,7 @@ function Header () {
 	
 	const [show, setModal] = useState();
   const showModal = () => setModal(true);
-	const hideModal = () => setModal(false);
-
+	const hideModal = () => setModal(false)
 	const showMenu = (toogleID, navID) => {
 		const toggle = document.getElementById(toogleID);
 		const nav = document.getElementById(navID);
@@ -73,9 +72,10 @@ function Header () {
 					<box-icon color="white" name='menu'></box-icon>
 				</div>
 			</nav>
-			<Contact show={show} handleClose={hideModal} >
-				<p>sss</p>
-			</Contact>
+			{
+				show === true ? <Contact show={show} hideModal={hideModal}  /> : null
+			}
+			
 		</header>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Waves() {
+export function AnimatedWaves() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -35,4 +35,13 @@ function Waves() {
   );
 }
 
-export default Waves;
+export function SimpleWaves() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="simpleSvg">
+      <path
+        fill="#fff"
+        d="M0 288l60-21.3C120 245 240 203 360 160s240-85 360-96 240 11 360 53.3C1200 160 1320 224 1380 256l60 32v32H0z"
+      />
+    </svg>
+  )
+}
