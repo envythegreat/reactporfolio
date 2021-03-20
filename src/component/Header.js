@@ -1,4 +1,3 @@
-// import '../App.css'
 import React, {useEffect, useState} from 'react';
 import 'boxicons';
 import Contact from './Contact';
@@ -26,7 +25,7 @@ function Header () {
 		navMenu.classList.remove('show');
 	}
 
-
+	// SCROLL SECTIONS ACTIVE LINK //
 	const sections = document.querySelectorAll('section[id]');
 	function scrollActive(){
 		const scrollY = window.pageYOffset
@@ -66,10 +65,10 @@ function Header () {
 						<li className="nav__item"><a className="nav__link active" href="#Home">Home</a></li>
 						<li className="nav__item"><a className="nav__link" href="#About">About</a></li>
 						<li className="nav__item"><a className="nav__link" href="#Skills">Skills</a></li>
-						<li className="nav__item"><a className="nav__link" href="#Portfolio">Projects</a></li>
 						<li className="nav__item"><a className="nav__link" href="#Education">Education</a></li>
-						
-						<li className="nav__item"><a className="nav__link contactd__button" href="#Contact" onClick={showModal} >Contact us</a></li>
+						<li className="nav__item"><a className="nav__link" href="#Portfolio">Projects</a></li>
+
+						<li className="nav__item"><button className="nav__link contactd__button"  onClick={showModal} >Contact us</button></li>
 					</ul>
 				</div>
 
