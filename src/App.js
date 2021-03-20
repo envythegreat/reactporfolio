@@ -1,3 +1,5 @@
+import React from 'react'
+
 import './App.css';
 
 import Header from './component/Header';
@@ -9,6 +11,7 @@ import Projects from './component/sections/Projects';
 import Footer from './component/sections/Footer';
 
 function App() {
+
   return (
     <div>
       <Header />

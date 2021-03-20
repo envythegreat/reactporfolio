@@ -9,6 +9,8 @@ function Header () {
 	const [show, setModal] = useState();
   const showModal = () => setModal(true);
 	const hideModal = () => setModal(false)
+
+
 	const showMenu = (toogleID, navID) => {
 		const toggle = document.getElementById(toogleID);
 		const nav = document.getElementById(navID);
@@ -24,28 +26,29 @@ function Header () {
 		navMenu.classList.remove('show');
 	}
 
-	// function scrollActive(){
-	// 	const scrollY = window.pageYOffset
 
-	// 	sections.forEach(current =>{
-	// 		const sectionHeight = current.offsetHeight
-	// 		const sectionTop = current.offsetTop - 50;
-	// 		sectionId = current.getAttribute('id')
+	const sections = document.querySelectorAll('section[id]');
+	function scrollActive(){
+		const scrollY = window.pageYOffset
 
-	// 		if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-	// 			document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
-	// 		}else{
-	// 			document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
-	// 		}
-	// 	})
-	// }
+		sections.forEach(current =>{
+			const sectionHeight = current.offsetHeight
+			const sectionTop = current.offsetTop - 50;
+			let sectionId = current.getAttribute('id')
+
+			if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+				document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
+			}else{
+				document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
+			}
+		})
+	}
 
 
 	useEffect(() => {
 		showMenu('nav-toggle', 'nav-menu');
 		const navLinks = document.querySelectorAll('.nav__link');
-		// const sections = document.querySelectorAll('section[id]');
-		// window.addEventListener('scroll', scrollActive);
+		window.addEventListener('scroll', scrollActive);
 		navLinks.forEach(n => n.addEventListener('click', linkAction));
 	})
 	
@@ -63,7 +66,9 @@ function Header () {
 						<li className="nav__item"><a className="nav__link active" href="#Home">Home</a></li>
 						<li className="nav__item"><a className="nav__link" href="#About">About</a></li>
 						<li className="nav__item"><a className="nav__link" href="#Skills">Skills</a></li>
-						<li className="nav__item"><a className="nav__link" href="#Projects">Projects</a></li>
+						<li className="nav__item"><a className="nav__link" href="#Portfolio">Projects</a></li>
+						<li className="nav__item"><a className="nav__link" href="#Education">Education</a></li>
+						
 						<li className="nav__item"><a className="nav__link contactd__button" href="#Contact" onClick={showModal} >Contact us</a></li>
 					</ul>
 				</div>

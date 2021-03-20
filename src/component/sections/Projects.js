@@ -31,7 +31,7 @@ function Projects () {
     }
   }
   return (
-    <div className="portfolio section" id="portfolio">
+    <div className="portfolio section" id="Portfolio">
       <h2 className="section-title">Projects</h2>
       <div className="button__container">
         <button 

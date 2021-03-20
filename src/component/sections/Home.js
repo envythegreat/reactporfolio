@@ -3,7 +3,7 @@ import {AnimatedWaves} from '../Waves'
 
 function Home () {
   return(
-    <section className="home" id="home">
+    <section className="home" id="Home">
       <div className="home__container bd-grid">
         <h1 className="home__title"><span>Mohamed Habib</span><br/>ALOUANI </h1>
         <div className="home__scroll">

@@ -6,7 +6,7 @@ function Education () {
   const [switchType, setSwitchType] = useState(true)
 
   return(
-    <section className="education section">
+    <section className="education section" id="Education">
       <h2 className="section-title">My Education</h2>
       <div className="button__container">
         <button 

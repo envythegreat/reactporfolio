@@ -3,7 +3,7 @@ import Skill from '../Skill';
 
 function Skills () {
   return(
-    <section className="skills section" id="skills">
+    <section className="skills section" id="Skills">
       <h2 className="section-title">My Skills</h2>
       <div className="skills__container bd-grid">
         <div className="skills__content">
