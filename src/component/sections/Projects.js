@@ -17,10 +17,13 @@ function Projects () {
         return (<>
                   <Project imgLink={require('../../assets/Uiex1.png').default} link="#linkUIUX1" />
                   <Project imgLink={require('../../assets/Uiex2.png').default} link="#linkUIUX2" />
+                  <Project imgLink={require('../../assets/Uiex2.png').default} link="#linkUIUX2" />
+                  <Project imgLink={require('../../assets/Uiex2.png').default} link="#linkUIUX2" />
                 </>);
       case 'UIUX':
         return (<>
                   <Project imgLink={require('../../assets/Uiex1.png').default} link="#linkUIUX1" />
+                  <Project imgLink={require('../../assets/Uiex2.png').default} link="#linkUIUX2" />
                   <Project imgLink={require('../../assets/Uiex2.png').default} link="#linkUIUX2" />
                 </>);
       default:
