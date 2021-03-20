@@ -270,6 +270,7 @@ img{
     border-radius: 5px;
     padding: 10px;
     animation: glow 5s infinite;
+    background-color: transparent;
 }
 
 /* .WallpaperImg{
@@ -420,7 +421,7 @@ img{
 
 /* ===== CONTACT =====*/
 .contact{
-    padding: 0;
+    padding: 2rem;
 }
 .contact__container{
     row-gap: 3rem;
@@ -487,6 +488,57 @@ img{
     background-color: transparent;
     outline: none;
 }
+/* ==== Settings ====*/
+.Settings__Container{
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 100px;
+    padding: 5px 15px 0px 10px;
+    border: 1px solid #111;
+    display: flex;
+    border-left: none;
+    border-radius: 0 20px 20px 0px;
+    box-shadow: #111111;
+    background-color: snow;
+}
+.feather-settings{
+    color:#111111;
+    justify-content: center;
+    animation: rotation 2s infinite;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 /* ===== FOOTER=====*/
 .footer{
     background-color: #111111;
@@ -727,11 +779,16 @@ img{
     }
 
     .contact__container{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         justify-items: center;
     }
     .contact__form{
         width: 380px;
+    }
+    .contact{
+        padding: 0px;
+        padding-bottom: 1rem;
+        justify-content: center;
     }
     .footer{
         padding: 0px;
