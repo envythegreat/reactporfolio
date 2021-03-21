@@ -1,10 +1,10 @@
 import React from "react";
-export function AnimatedWaves() {
+export function AnimatedWaves({classnames}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      className="waves"
+      className={classnames}
       preserveAspectRatio="none"
       viewBox="0 24 150 28"
     >
@@ -34,12 +34,12 @@ export function AnimatedWaves() {
   );
 }
 
-export function SimpleWaves() {
+export function SimpleWaves({classnames}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      className="simpleSvg"
+      className={classnames}
       preserveAspectRatio="none"
       viewBox="0 0 1440 320"
     >

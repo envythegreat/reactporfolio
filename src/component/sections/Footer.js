@@ -5,7 +5,7 @@ import {SimpleWaves} from '../Waves'
 function Footer() {
   return(
     <footer className="footer section">
-      <SimpleWaves />
+      <SimpleWaves classnames="simpleSvg" />
       <div className="footer__container bd-grid">
         <h1 className="footer__title">Mohamed Habib ALOUNI</h1>
         <p className="footer__description">

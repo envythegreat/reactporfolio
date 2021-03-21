@@ -14,7 +14,7 @@ function Home () {
         
         {/* <img src={require('../../assets/sukuna.png').default} alt="ss" className="home__img" /> */}
       </div>
-      <AnimatedWaves />
+      <AnimatedWaves classnames="waves" />
     </section>
   );
 }
